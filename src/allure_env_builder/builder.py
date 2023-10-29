@@ -26,6 +26,7 @@ class AllureEnvironmentsBuilder:
     def with_environments(self):
         """Добавить все переменные окружения"""
         self._properties |= os.environ
+        return self
 
     def build(self, results_dir: Optional[AnyStr | Path] = None):
         """Построить файл с переменными окружения для allure
